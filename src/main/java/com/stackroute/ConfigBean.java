@@ -21,7 +21,7 @@ public class ConfigBean {
         return new Actor("Shivani Sajjan", "Female", 22);
     }
 
-    @Bean(name = {"beanLifeCycle"}, initMethod = "customInit" , destroyMethod = "customDestroy")
+    @Bean(name = {"beanLifeCycle"})
     public BeanLifecycleDemoBean lifecycleDemoBean(){
         return new BeanLifecycleDemoBean();
     }
