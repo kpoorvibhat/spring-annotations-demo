@@ -1,6 +1,7 @@
 package com.stackroute;
 
 import com.stackroute.demo.BeanLifecycleDemoBean;
+import com.stackroute.demo.BeanPostProcessorDemoBean;
 import com.stackroute.domain.Actor;
 import com.stackroute.domain.Movie;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
@@ -24,6 +25,11 @@ public class ConfigBean {
     @Bean(name = {"beanLifeCycle"})
     public BeanLifecycleDemoBean lifecycleDemoBean(){
         return new BeanLifecycleDemoBean();
+    }
+
+    @Bean
+    public BeanPostProcessorDemoBean beanPostProcessorDemoBean(){
+        return new BeanPostProcessorDemoBean();
     }
 
 }
