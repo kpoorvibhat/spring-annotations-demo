@@ -12,12 +12,12 @@ public class ConfigBean {
 
     @Bean(name = {"movie"})
     public Movie movieBean() {
-        return new Movie();
+        return new Movie(actor());
     }
 
     @Bean(name = {"movie2"})
     public Movie movieBean2(){
-        return new Movie();
+        return new Movie(actor2());
     }
 
     @Bean
