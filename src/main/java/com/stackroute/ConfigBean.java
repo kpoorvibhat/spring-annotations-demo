@@ -1,5 +1,6 @@
 package com.stackroute;
 
+import com.stackroute.demo.BeanLifecycleDemoBean;
 import com.stackroute.domain.Actor;
 import com.stackroute.domain.Movie;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
@@ -18,6 +19,11 @@ public class ConfigBean {
     @Bean(name ={"actor"})
     public Actor actor() {
         return new Actor("Shivani Sajjan", "Female", 22);
+    }
+
+    @Bean(name = {"beanLifeCycle"})
+    public BeanLifecycleDemoBean lifecycleDemoBean(){
+        return new BeanLifecycleDemoBean();
     }
 
 }
