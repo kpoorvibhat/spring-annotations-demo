@@ -1,15 +1,16 @@
 package com.stackroute.domain;
 
-import org.springframework.beans.factory.annotation.Value;
-
 public class Actor {
 
-    @Value("Shivani Sajjan")
     private String name;
-    @Value("Female")
     private String gender;
-    @Value("22")
     private int age;
+
+    public Actor(String name, String gender, int age) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+    }
 
     public void setName(String name) {
         this.name = name;
