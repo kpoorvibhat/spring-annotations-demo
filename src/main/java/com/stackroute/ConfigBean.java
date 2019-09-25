@@ -15,19 +15,9 @@ public class ConfigBean {
         return new Movie(actor());
     }
 
-    @Bean(name = {"movie2"})
-    public Movie movieBean2(){
-        return new Movie(actor2());
-    }
-
-    @Bean
+    @Bean(name ={"actor"})
     public Actor actor() {
         return new Actor("Shivani Sajjan", "Female", 22);
-    }
-
-    @Bean
-    public Actor actor2() {
-        return new Actor("Poorvi", "Female", 25);
     }
 
 }
