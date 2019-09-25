@@ -10,26 +10,24 @@ import org.springframework.context.annotation.Scope;
 @Configuration
 public class ConfigBean {
 
-    @Bean(name = {"movie1", "movie3"})
-    @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    @Bean(name = {"movie"})
     public Movie movieBean() {
-        Movie movie = new Movie(actorBean());
-        return movie;
+        return new Movie();
     }
 
     @Bean(name = {"movie2"})
-    public Movie movieBean2() {
-        Movie movie = new Movie(actorBean2());
-        return movie;
+    public Movie movieBean2(){
+        return new Movie();
     }
 
     @Bean
-    public Actor actorBean() {
+    public Actor actor() {
         return new Actor("Shivani Sajjan", "Female", 22);
     }
 
     @Bean
-    public Actor actorBean2() {
-        return new Actor("Deepak", "Male", 25);
+    public Actor actor2() {
+        return new Actor("Poorvi", "Female", 25);
     }
+
 }
